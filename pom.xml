@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>pay</groupId>
-	<artifactId>pay</artifactId>
+	<groupId>com.cms</groupId>
+	<artifactId>cms-springboot</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>payCenter</name>
+	<name>cms-springboot</name>
 	<url>http://maven.apache.org</url>
 
 
@@ -450,7 +450,7 @@
         </profile>
     </profiles>-->
 	<build>
-		<finalName>PAY</finalName>
+		<finalName>cms-springboot</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
