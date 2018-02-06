@@ -421,34 +421,6 @@
         </dependency>
     </dependencies>
 
-
-    <!--环境配置-->
-<!--    <profiles>
-        <profile>
-            &lt;!&ndash; 本地开发环境 &ndash;&gt;
-            <id>dev</id>
-            <properties>
-                <profiles.active>dev</profiles.active>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-        <profile>
-            &lt;!&ndash; 测试环境 &ndash;&gt;
-            <id>test</id>
-            <properties>
-                <profiles.active>test</profiles.active>
-            </properties>
-        </profile>
-        <profile>
-            &lt;!&ndash; 生产环境 &ndash;&gt;
-            <id>pro</id>
-            <properties>
-                <profiles.active>prod</profiles.active>
-            </properties>
-        </profile>
-    </profiles>-->
 	<build>
 		<finalName>cms-springboot</finalName>
 		<plugins>
