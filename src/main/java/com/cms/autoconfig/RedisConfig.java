@@ -10,7 +10,8 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- * Created by yangqj on 2017/4/30.
+ * @author maocg
+ * @date
  */
 @Configuration
 @EnableCaching
