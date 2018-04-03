@@ -3,6 +3,9 @@ package com.cms.filter;
 import com.cms.controller.system.BaseController;
 
 import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.Calendar;
 
 /**
@@ -15,7 +18,7 @@ public class StartFilter extends BaseController implements Filter {
     }
 
     /**
-     *定时任务
+     * 定时任务
      */
     public void timer() {
         Calendar calendar = Calendar.getInstance();
@@ -33,11 +36,14 @@ public class StartFilter extends BaseController implements Filter {
     }
 
 
-    @Override
-    public void doFilter(ServletRequest arg0, ServletResponse arg1,
-                         FilterChain arg2) {
-        // TODO Auto-generated method stub
 
+    @Override
+    public void doFilter(ServletRequest req, ServletResponse res,
+                         FilterChain chain) throws IOException, ServletException {
+        HttpServletRequest request = (HttpServletRequest) req;
+        HttpServletResponse response = (HttpServletResponse) res;
+
+        chain.doFilter(request, response);
     }
 
 

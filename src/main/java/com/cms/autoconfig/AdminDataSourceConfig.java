@@ -23,7 +23,7 @@ import javax.sql.DataSource;
  * 统计库数据源
  */
 @Configuration
-@MapperScan(basePackages = "com.kuwo.dao",sqlSessionTemplateRef  = "adminSqlSessionTemplate")
+@MapperScan(basePackages = "com.cms.dao",sqlSessionTemplateRef  = "adminSqlSessionTemplate")
 public class AdminDataSourceConfig {
 
     @Bean(name = "adminDataSource")

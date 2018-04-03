@@ -22,7 +22,7 @@ public class FilterConfiguration {
         start.setOrder(1);
         return start;
     }
-    @Bean("startFilter")
+    @Bean("loginFilter")
     public FilterRegistrationBean loginFilterRegistration() {
 
         FilterRegistrationBean login = new FilterRegistrationBean();
