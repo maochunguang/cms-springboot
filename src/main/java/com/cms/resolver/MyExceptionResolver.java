@@ -7,11 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 类名称：MyExceptionResolver.java
- * 类描述：
- *
  * @author maocg
- * 作者单位：
  * @version 1.0
  */
 public class MyExceptionResolver implements HandlerExceptionResolver {

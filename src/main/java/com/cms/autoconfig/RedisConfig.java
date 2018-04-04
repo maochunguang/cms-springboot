@@ -31,29 +31,22 @@ public class RedisConfig extends CachingConfigurerSupport {
     @Value("${spring.redis.pool.max-wait}")
     private long maxWaitMillis;
 
-    public static String HOST;
-    public static int PORT;
-    public static int TIMEOUT;
-    public static int MAXIDLE;
-    public static long MAXWAITMILLIS;
-
+    public static volatile JedisPool jedisPool;
 
     @Bean
-    public JedisPool redisPoolFactory() {
-        HOST = host;
-        PORT = port;
-        TIMEOUT = timeout;
-        MAXIDLE = maxIdle;
-        MAXWAITMILLIS = maxWaitMillis;
-
-        Logger.getLogger(getClass()).info("JedisPool注入成功！！");
-        Logger.getLogger(getClass()).info("redis地址：" + host + ":" + port);
-        JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
-        jedisPoolConfig.setMaxIdle(maxIdle);
-        jedisPoolConfig.setMaxWaitMillis(maxWaitMillis);
-
-        JedisPool jedisPool = new JedisPool(jedisPoolConfig, host, port, timeout);
-
+    public JedisPool getRedisPool() {
+        if (jedisPool == null) {
+            synchronized (RedisConfig.class) {
+                if (jedisPool == null) {
+                    JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+                    jedisPoolConfig.setMaxIdle(maxIdle);
+                    jedisPoolConfig.setMaxWaitMillis(maxWaitMillis);
+                    jedisPool = new JedisPool(jedisPoolConfig, host, port, timeout);
+                    Logger.getLogger(getClass()).info("JedisPool注入成功！！");
+                    Logger.getLogger(getClass()).info("redis地址：" + host + ":" + port);
+                }
+            }
+        }
         return jedisPool;
     }
 
