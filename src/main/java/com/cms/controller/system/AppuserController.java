@@ -130,7 +130,7 @@ public class AppuserController extends BaseController {
 	@RequestMapping(value="/hasN")
 	@ResponseBody
 	public Object hasN(){
-		Map<String,String> map = new HashMap<String,String>();
+		Map<String,String> map = new HashMap<>();
 		String errInfo = "success";
 		PageData pd = new PageData();
 		try{
