@@ -22,7 +22,7 @@ import java.util.Map;
  * Date：2018/2/3
  * Description：TODO
  */
-//@Configuration
+@Configuration
 public class ShiroConfiguration {
     @Value("${spring.redis.host}")
     private String host;
@@ -92,7 +92,7 @@ public class ShiroConfiguration {
         //设置realm.
         securityManager.setRealm(myShiroRealm());
         // 自定义缓存实现 使用redis
-        //securityManager.setCacheManager(cacheManager());
+        securityManager.setCacheManager(cacheManager());
         // 自定义session管理 使用redis
         securityManager.setSessionManager(sessionManager());
         return securityManager;
@@ -100,9 +100,8 @@ public class ShiroConfiguration {
 
     @Bean
     public ShiroRealm myShiroRealm(){
-        ShiroRealm myShiroRealm = new ShiroRealm();
-//        myShiroRealm.setCredentialsMatcher(hashedCredentialsMatcher());
-        return myShiroRealm;
+        //        myShiroRealm.setCredentialsMatcher(hashedCredentialsMatcher());
+        return new ShiroRealm();
     }
 
     /**
