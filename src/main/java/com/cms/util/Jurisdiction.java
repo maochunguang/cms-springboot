@@ -11,7 +11,7 @@ import com.cms.entity.system.Menu;
 
 /**
  * 权限处理
- * @authorfh
+ * @author maocg
 */
 public class Jurisdiction {
 
