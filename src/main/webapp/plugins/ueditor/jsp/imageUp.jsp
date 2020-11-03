@@ -8,8 +8,8 @@
         <%@ page import="ueditor.Uploader" %>
         <%@ page import="java.io.File" %>
         <%@ page import="java.util.Map" %>
-    <%@ page import="com.kuwo.util.*" %>
-    <%@ page import="com.kuwo.util.file.Uploader" %>
+    <%@ page import="com.cms.util.*" %>
+    <%@ page import="com.cms.util.file.Uploader" %>
 
     <%
 

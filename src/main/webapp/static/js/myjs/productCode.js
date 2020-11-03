@@ -158,7 +158,7 @@
 		
 		dbz = dbz == '' ? '无':dbz;
 		ddefault = ddefault == '' ? '无':ddefault;
-        var fields = dname + ',kuwo,' + dtype + ',kuwo,' + dbz + ',kuwo,' + isQian + ',kuwo,' + ddefault;
+        var fields = dname + ',macos,' + dtype + ',macos,' + dbz + ',macos,' + isQian + ',macos,' + ddefault;
 		
 		if(msgIndex == ''){
 			arrayField(fields);
@@ -182,7 +182,7 @@
 	}
 	//打开编辑属性(修改)
 	function editField(value,msgIndex){
-        var efieldarray = value.split(',kuwo,');
+        var efieldarray = value.split(',macos,');
 		$("#dname").val(efieldarray[0]);
 		$("#hcdname").val(efieldarray[0]);
 		$("#dbz").val(efieldarray[2]);
@@ -235,7 +235,7 @@
 	//追加属性列表
 	function appendC(value){
 
-        var fieldarray = value.split(',kuwo,');
+        var fieldarray = value.split(',macos,');
 		
 		$("#fields").append(
 			'<tr>'+
@@ -284,7 +284,7 @@
 	//判断属性名是否重复
 	function isSame(value){
 		for(var i=0;i<arField.length;i++){
-            var array0 = arField[i].split(',kuwo,')[0];
+            var array0 = arField[i].split(',macos,')[0];
 			if(array0 == value){
 				return false;
 			}

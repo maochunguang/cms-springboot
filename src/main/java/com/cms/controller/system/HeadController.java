@@ -386,9 +386,9 @@ public class HeadController extends BaseController {
 		pd = this.getPageData();
 		Tools.writeFile(Const.SYSNAME,pd.getString("YSYNAME"));	//写入系统名称
 		Tools.writeFile(Const.PAGE,pd.getString("COUNTPAGE"));	//写入每页条数
-        Tools.writeFile(Const.EMAIL, pd.getString("SMTP") + ",kuwo," + pd.getString("PORT") + ",kuwo," + pd.getString("EMAIL") + ",kuwo," + pd.getString("PAW"));    //写入邮件服务器配置
-        Tools.writeFile(Const.SMS1, pd.getString("SMSU1") + ",kuwo," + pd.getString("SMSPAW1"));    //写入短信1配置
-        Tools.writeFile(Const.SMS2, pd.getString("SMSU2") + ",kuwo," + pd.getString("SMSPAW2"));    //写入短信2配置
+        Tools.writeFile(Const.EMAIL, pd.getString("SMTP") + ",," + pd.getString("PORT") + " Const.ENCRYPTION_STR" + pd.getString("EMAIL") + " Const.ENCRYPTION_STR" + pd.getString("PAW"));    //写入邮件服务器配置
+        Tools.writeFile(Const.SMS1, pd.getString("SMSU1") + " Const.ENCRYPTION_STR" + pd.getString("SMSPAW1"));    //写入短信1配置
+        Tools.writeFile(Const.SMS2, pd.getString("SMSU2") + " Const.ENCRYPTION_STR" + pd.getString("SMSPAW2"));    //写入短信2配置
         mv.addObject("msg","OK");
 		mv.setViewName("save_result");
 		return mv;
@@ -402,8 +402,8 @@ public class HeadController extends BaseController {
 		ModelAndView mv = this.getModelAndView();
 		PageData pd = new PageData();
 		pd = this.getPageData();
-        Tools.writeFile(Const.FWATERM, pd.getString("isCheck1") + ",kuwo," + pd.getString("fcontent") + ",kuwo," + pd.getString("fontSize") + ",kuwo," + pd.getString("fontX") + ",kuwo," + pd.getString("fontY"));    //文字水印配置
-        Tools.writeFile(Const.IWATERM, pd.getString("isCheck2") + ",kuwo," + pd.getString("imgUrl") + ",kuwo," + pd.getString("imgX") + ",kuwo," + pd.getString("imgY"));    //图片水印配置
+        Tools.writeFile(Const.FWATERM, pd.getString("isCheck1") + " Const.ENCRYPTION_STR" + pd.getString("fcontent") + " Const.ENCRYPTION_STR" + pd.getString("fontSize") + " Const.ENCRYPTION_STR" + pd.getString("fontX") + " Const.ENCRYPTION_STR" + pd.getString("fontY"));    //文字水印配置
+        Tools.writeFile(Const.IWATERM, pd.getString("isCheck2") + " Const.ENCRYPTION_STR" + pd.getString("imgUrl") + " Const.ENCRYPTION_STR" + pd.getString("imgX") + " Const.ENCRYPTION_STR" + pd.getString("imgY"));    //图片水印配置
         mv.addObject("msg","OK");
 		mv.setViewName("save_result");
 		return mv;

@@ -31,10 +31,10 @@ function sendSever(){
 		return false;
 	}
 
-    //加密方式  (取其中一个参数名+当前日期[格式 20150405]+混淆码",kuwo," 然后md5加密 的值作为 参数FKEY的值提交)
+    //加密方式  (取其中一个参数名+当前日期[格式 20150405]+混淆码",macos," 然后md5加密 的值作为 参数FKEY的值提交)
 	var paraname = $("#S_TYPE_S").val();	//要加密的参数
 	var nowtime = date2str(new Date(),"yyyyMMdd");
-    //alert($.md5(paraname+nowtime+',kuwo,'));
+    //alert($.md5(paraname+nowtime+',macos,'));
 	
 	var startTime = new Date().getTime(); //请求开始时间  毫秒
 	top.jzts();
@@ -42,7 +42,7 @@ function sendSever(){
 		type: "POST",
 		url: locat+'/tool/severTest.do',
         data: {
-            serverUrl: $("#serverUrl").val() + "&FKEY=" + $.md5(paraname + nowtime + ',kuwo,'),
+            serverUrl: $("#serverUrl").val() + "&FKEY=" + $.md5(paraname + nowtime + ',macos,'),
             requestMethod: $("#S_TYPE").val(),
             tm: new Date().getTime()
         },

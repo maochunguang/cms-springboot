@@ -22,7 +22,7 @@ jenkins发布
 ## entity定义
 
 wxuser表结构
-userid，酷我uid
+userid
 openid，公众号openid
 unionid，公众号unionid
 tag，用户标签

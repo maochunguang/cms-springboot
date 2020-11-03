@@ -37,7 +37,7 @@ public class Const {
 
 
     public static ApplicationContext WEB_APP_CONTEXT = null; //该值会在web容器启动时由WebAppContextListener初始化
-
+    public static final String ENCRYPTION_STR = ",macos,";
 
     /**
      * app注册接口_请求协议参数)
