@@ -310,7 +310,7 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.11</version>
+            <version>4.1.1</version>
         </dependency>
         <!-- poi-examples-3.11-20141221 -->
         <dependency>
